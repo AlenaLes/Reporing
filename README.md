@@ -9,6 +9,7 @@
 - JupiterHub
 - Clickhouse
 - Airflow
+- Superset
 - Python
 
 ## Ежедневная отчетность по ленте новостей

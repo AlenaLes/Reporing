@@ -17,5 +17,7 @@
 
 ![image](https://user-images.githubusercontent.com/100629361/207143473-1388d215-7915-49e0-bd58-4fd34c91fcf2.png)
 
+В Jupiter notebook можно посмотреть подробную настройку графиков и способ подсчеа метрик.
+
 В результате ежедневно получаем следующий отчет:
 ![image](https://user-images.githubusercontent.com/100629361/207144872-ff32a48a-23a5-4349-bd34-1ad715e436ff.png)

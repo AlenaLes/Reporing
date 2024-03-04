@@ -43,7 +43,7 @@ q_1 = """
         sum(action = 'view') as views
     FROM simulator_20221020.feed_actions 
     WHERE toDate(time) = yesterday()
-    GROUP BY user_id
+    GROUP BY 1
     """
 
 q_2 = """
@@ -54,7 +54,7 @@ q_2 = """
       likes / views as ctr
     FROM simulator_20221020.feed_actions 
     WHERE date between yesterday() - 7 and yesterday()
-    GROUP BY date
+    GROUP BY 1
     """
 
 q_3 = """
@@ -62,7 +62,7 @@ q_3 = """
       COUNT(DISTINCT user_id) as users
     FROM simulator_20221020.message_actions 
     WHERE date between yesterday() - 7 and yesterday()
-    GROUP BY date
+    GROUP BY 1
     """
 
 

@@ -47,7 +47,7 @@ dates = """
     from simulator_20221020.feed_actions 
     where toDate(time) >= today() - 7 and toDate(time) <= yesterday()
     group by toDate(time)
-    order by days
+    order by 1
     """
 
 @dag(default_args=default_args, schedule_interval=schedule_interval, catchup=False)
@@ -58,10 +58,10 @@ def a_lesihina_bot():
         df = ph.read_clickhouse(dates, connection=connection)
         msg = '''Cтатистика за вчерашний день:\nDAU: {DAU}\nViews: {views}\nLikes: {likes}\nCTR: {CTR:.2%}'''\
         .format(days=str(df.days[0]).split(' ')[0],
-            DAU=df.DAU[0],
-            views=df.views[0],
-            likes=df.likes[0],
-            CTR=df.CTR[0])  
+            DAU     = df.DAU[0],
+            views   = df.views[0],
+            likes   = df.likes[0],
+            CTR     = df.CTR[0])  
         bot.sendMessage(chat_id=chat_id, text=msg)      
         
         
